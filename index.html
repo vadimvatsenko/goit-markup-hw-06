@@ -73,8 +73,8 @@
               <form class="modal-form">
                 <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                 <!-- - вместо fieldset -->
-                <div class="fieldset-form" role="group">
-                  <label class="form form-name"
+                <div class="fieldset-forms" role="group">
+                  <label class="form"
                     >Имя
                     <div class="form-wrapper">
                       <input class="field" type="text" name="name" id="name" autofocus />
@@ -84,7 +84,7 @@
                     </div>
                   </label>
 
-                  <label class="form form-tel"
+                  <label class="form"
                     >Телефон
                     <div class="form-wrapper">
                       <input class="field" type="tel" name="tel" id="tel" />
@@ -94,7 +94,7 @@
                     </div>
                   </label>
 
-                  <label class="form form-email"
+                  <label class="form"
                     >Почта
                     <div class="form-wrapper">
                       <input class="field" type="email" name="email" id="email" />
@@ -113,12 +113,15 @@
                     ></textarea>
                   </label>
 
-                  <label class="form form-checkbox"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a class="checkbox-link" href="">Условия договора</a>
-                    <input class="input-checkbox" type="checkbox" name="checkbox" id="checkbox" />
+                  <label class="form form-checkbox">
+                    <input class="checkbox-input" type="checkbox" name="checkbox" id="checkbox" />
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-descr"
+                      >Соглашаюсь с рассылкой и принимаю
+                      <a class="checkbox-link" href="">Условия договора</a>
+                    </span>
                   </label>
-                  <button class="main-button" type="submit">Отправить</button>
+                  <button class="main-button form-button" type="submit">Отправить</button>
                 </div>
               </form>
             </div>
@@ -469,14 +472,8 @@
         <div class="footer-subscribe">
           <p class="subscribe-title">Подпишитесь на рассылку</p>
           <form class="footer-form">
-            <label for="email">
-              <input
-                class="footer-input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
+            <label>
+              <input class="footer-input" type="email" name="email" placeholder="E-mail" />
             </label>
             <button class="main-button footer-botton" type="submit">
               Подписаться
