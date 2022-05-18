@@ -36,6 +36,7 @@
     --modal-botton-border: 1px solid rgba(0, 0, 0, 0.1);
     --modal-field-color: rgba(33, 33, 33, 0.2);
     --textarea-placeholder-text: rgba(117, 117, 117, 0.5);
+    --footer-placeholded-text: rgba(255, 255, 255, 0.6)
 
                 
 }
@@ -383,8 +384,8 @@ ul {
     fill: var(--main-text-color);
 
     transition: fill 250ms var(--timing-function);
-}
 
+}
 .name-icon:hover {
     fill: var(--hover-focus-color)
 }
@@ -412,13 +413,13 @@ ul {
 .fieldset-forms .form-checkbox {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
 }
-
 .form-checkbox>.checkbox-descr {
     font-size: 14px;
 }
-
+/* лицензионное соглашение */
 .checkbox-descr>.checkbox-link {
     color: var(--hover-focus-color)
 }
@@ -445,7 +446,7 @@ ul {
 
     transition: background 250ms var(--timing-function);
 }
-
+/* когда checkbox активен, то применяются такие стили */
 .checkbox-input:checked + .checkbox-icon {
     border-color: var(--hover-focus-color);
     background-color: var(--hover-focus-color);
@@ -743,9 +744,9 @@ ul {
     border-radius: 4px;
     cursor: pointer;
 }
-.footer-input[type="email"]{
+.footer-input::placeholder{
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--footer-placeholded-text);
 
 }
 .main-button.footer-botton {
