@@ -310,7 +310,7 @@ ul {
 }
 .modal-button:hover,
 .modal-button:focus {
-    fill: var(--hover-focus-color)
+    fill: var(--hover-focus-color);
 }
 
 /* Заголовок модального окна  */
@@ -320,17 +320,14 @@ ul {
     text-align: center;
     color: var(--main-text-color)
 }
-
 /* группировка всех форм */
 .fieldset-forms {
     margin-top: 12px;
 }
-
 .fieldset-forms .form {
     display: flex;
     flex-direction: column;
 }
-
 /* заголовки полей */
 .form {
     margin-top: 10px;
@@ -341,17 +338,14 @@ ul {
 
     cursor: pointer;
 }
-
 .form:first-child {
     margin-top: 0;
 }
-
 /* обвертка поля и иконки для позиционирования */
 .form-wrapper {
     position: relative;
     margin-top: 4px;
 }
-
 /* форма поля */
 .form .field {
     padding: 0;
@@ -364,57 +358,40 @@ ul {
 
     cursor: pointer;
 
-    transition: border-color 250ms var(--timing-function);
-}
+    transition: border-color 250ms var(--timing-function),
+                outline 250ms var(--timing-function);
 
-.form .field:hover {
-    border-color: var(--hover-focus-color);
 }
-
-/* сделал outline при фокусе */
 .form .field:focus {
-    outline: 2px solid var(--hover-focus-color);
+    border: 1px solid var(--hover-focus-color);
+    outline: inherit
 }
-
 .name-icon {
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
     fill: var(--main-text-color);
-
-    transition: fill 250ms var(--timing-function);
-
 }
-.name-icon:hover {
+.form .field:focus + .name-icon {
     fill: var(--hover-focus-color)
 }
-
-/* при наведении на поле меняется цвет иконок */
-.form .field:hover+.name-icon,
-.form .field:focus+.name-icon {
-    fill: var(--hover-focus-color);
-}
-
 .form>.field-textarea {
     margin-top: 4px;
     height: 120px;
     padding: 12px 16px;
     resize: none;
 }
-
 /* стиль placeholder */
 .form>.field-textarea::placeholder {
     font-size: 14px;
     letter-spacing: 0.01em;
     color: var(--textarea-placeholder-text);
 }
-
 .fieldset-forms .form-checkbox {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
 }
 .form-checkbox>.checkbox-descr {
     font-size: 14px;
@@ -423,7 +400,6 @@ ul {
 .checkbox-descr>.checkbox-link {
     color: var(--hover-focus-color)
 }
-
 /* скрываем chexkbox */
 .checkbox-input {
     position: absolute;
@@ -435,7 +411,9 @@ ul {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
+.checkbox-input:focus-within + .checkbox-icon {
+    border: 1px solid var(--hover-focus-color)
+}
 .checkbox-icon {
     display: inline-block;
     margin-right: 7px;
@@ -446,6 +424,7 @@ ul {
 
     transition: background 250ms var(--timing-function);
 }
+
 /* когда checkbox активен, то применяются такие стили */
 .checkbox-input:checked + .checkbox-icon {
     border-color: var(--hover-focus-color);
@@ -454,11 +433,9 @@ ul {
     background-size: contain;
     background-origin: border-box;
 }
-
 .main-button.form-button {
     padding: 10px 55px;
 }
-
 /* Заголовок особенности скрыт */
 .peculiarities-title {
     font-size: 0;
@@ -490,11 +467,9 @@ ul {
 .peculiarities-list.icon-astronaut::before {
     background-image: url(../image/peculiarities/astronaut.svg);
 }
-
 .peculiarities-list + .peculiarities-list {
     margin-left: 30px;
 }
-
 .peculiarities-list>.title {
     font-size: 14px; /* - размер не наследуется от body */
     font-weight: 700;
