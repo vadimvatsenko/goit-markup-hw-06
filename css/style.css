@@ -330,6 +330,7 @@ ul {
 }
 /* заголовки полей */
 .form {
+    position: relative;
     margin-top: 10px;
     text-align: left;
     font-size: 12px;
@@ -341,13 +342,9 @@ ul {
 .form:first-child {
     margin-top: 0;
 }
-/* обвертка поля и иконки для позиционирования */
-.form-wrapper {
-    position: relative;
-    margin-top: 4px;
-}
 /* форма поля */
 .form .field {
+    margin-top: 4px;
     padding: 0;
     padding-left: 42px;
     width: 100%;
@@ -369,8 +366,7 @@ ul {
 .name-icon {
     position: absolute;
     left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 15px;
     fill: var(--main-text-color);
 }
 .form .field:focus + .name-icon {
@@ -713,10 +709,13 @@ ul {
     padding: 15px;
     margin-right: 12px;
     width: 358px;
+
+    color: var(--white-tx-bg-color);
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+
     cursor: pointer;
 }
 .footer-input::placeholder{
